@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="container">
       <h1>WhatsApp Bot Dashboard</h1>
-      <p>Hosted on GitHub Pages + Render</p>
+      <p>Hosted on GitHub Pages + Hugging Face</p>
 
       <div className="card">
         <h2>Connection Status</h2>
@@ -57,7 +57,7 @@ function App() {
 
         {status === 'error' && (
           <div className="error-message">
-            ❌ Cannot connect to Backend. Is Render awake?
+            ❌ Cannot connect to Backend. Is Hugging Face awake?
           </div>
         )}
       </div>
