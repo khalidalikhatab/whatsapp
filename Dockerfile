@@ -1,5 +1,8 @@
 FROM node:18-bullseye-slim
 
+# Install git
+RUN apt-get update && apt-get install -y git
+
 WORKDIR /app
 
 # Copy root package files

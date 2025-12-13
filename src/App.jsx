@@ -3,7 +3,7 @@ import './App.css';
 
 // IMPORTANT: Change this to your Render URL after deployment!
 // For local testing, use 'http://localhost:3000'
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_URL = 'https://aistudentshive-whatsapp-bot.hf.space';
 
 function App() {
   const [qrCode, setQrCode] = useState(null);
