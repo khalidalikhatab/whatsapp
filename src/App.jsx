@@ -25,6 +25,13 @@ function App() {
       } else {
         setQrCode(null);
       }
+
+      // Fetch logs
+      const logsRes = await fetch(`${API_URL}/logs`);
+      const logsData = await logsRes.json();
+      if (logsData.logs) {
+        setLogs(logsData.logs);
+      }
     } catch (err) {
       console.error("Error fetching status:", err);
       setStatus('error');
@@ -60,6 +67,19 @@ function App() {
             ❌ Cannot connect to Backend. Is Hugging Face awake?
           </div>
         )}
+      </div>
+
+      <div className="card logs-card">
+        <h3>Server Logs</h3>
+        <div className="logs-container">
+          {logs.length === 0 ? (
+            <p>No logs yet...</p>
+          ) : (
+            logs.map((log, index) => (
+              <div key={index} className="log-entry">{log}</div>
+            ))
+          )}
+        </div>
       </div>
     </div>
   );
