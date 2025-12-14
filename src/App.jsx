@@ -3,7 +3,7 @@ import './App.css';
 
 // IMPORTANT: Change this to your backend URL after deployment!
 // For local testing, use 'http://localhost:3000'
-const API_URL = 'https://whatsapp-backend-production-d3a0.up.railway.app';
+const API_URL = 'https://whatsapp-go-production.up.railway.app';
 
 function App() {
   const [qrCode, setQrCode] = useState(null);
