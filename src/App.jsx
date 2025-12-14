@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-// IMPORTANT: Change this to your Render URL after deployment!
+// IMPORTANT: Change this to your backend URL after deployment!
 // For local testing, use 'http://localhost:3000'
-const API_URL = 'https://aistudentshive-whatsapp-bot.hf.space';
+const API_URL = 'https://whatsapp-backend-production-d3a0.up.railway.app';
 
 function App() {
   const [qrCode, setQrCode] = useState(null);
@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="container">
       <h1>WhatsApp Bot Dashboard</h1>
-      <p>Hosted on GitHub Pages + Hugging Face</p>
+      <p>Hosted on GitHub Pages + Railway</p>
 
       <div className="card">
         <h2>Connection Status</h2>
@@ -64,7 +64,7 @@ function App() {
 
         {status === 'error' && (
           <div className="error-message">
-            ❌ Cannot connect to Backend. Is Hugging Face awake?
+            ❌ Cannot connect to Backend. Check if Railway is running.
           </div>
         )}
       </div>
